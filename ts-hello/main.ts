@@ -46,9 +46,10 @@ const ColorRed = 0;
 const ColorGreen = 1;
 const ColorBlue = 2;
 
-// enum is a constance 
+// enum is a constance in typescript
 // how to declare an enum
-enum Color {Red , Green, Blue};
+// the colors in curly brackets will usually follow this type of increment
+enum Color {Red = 0, Green = 1, Blue = 2, Purple = 3};
 let backgroundColor = Color.Red;
 
 // ------------------------------------------------------------------
