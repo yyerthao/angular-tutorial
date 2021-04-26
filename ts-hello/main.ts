@@ -34,28 +34,66 @@
 
 // ------------------------------------------------------------------
 
-let a: number;
-let b: boolean;
-let c: string;
-let d: any;
-let e: number[] = [1, 2, 3]; // can set to number array 
-let f: any[] = [1, true, 'a', false]; // can set to any array with multiple values
+// let a: number;
+// let b: boolean;
+// let c: string;
+// let d: any;
+// let e: number[] = [1, 2, 3]; // can set to number array 
+// let f: any[] = [1, true, 'a', false]; // can set to any array with multiple values
 
+// // 
+// const ColorRed = 0;
+// const ColorGreen = 1;
+// const ColorBlue = 2;
+
+// // enum is a constance in typescript
+// // how to declare an enum
+// // the colors in curly brackets will usually follow this type of increment
+// enum Color {Red = 0, Green = 1, Blue = 2, Purple = 3};
+// let backgroundColor = Color.Red;
+
+// ---------------------------- TYPE ASSERTIONS -------------------------
+
+// let message; // the type will be any since we haven't set the variable
+// message = 'abc';
+// let endsWithC = (<string>message).endsWith('c');
+// // second type of assertion, can choose top or bottom line
+// let alternativeWay = (message as string).endsWith('c');
+
+
+// // ------------------------------------------------------------------
+// let log = function(message){
+//     console.log(message)
+// }
+
+// // arrow function 
+// let doLog = (message) => console.log(message);
+
+// ------------------------------------------------------------------
+
+
+class Point {
+    x: number;
+    y: number;
+    
+    // constructor is a method we call when we create an instance of that class
+    // constructor is a reserved keyword in TS
+    // ? makes the variables optional - removes compilation error when creating a 
+    // point object with no initial value
+    constructor(x?: number, y?: number){
+        this.x = x;
+        this.y = x;
+    }
+    
+    draw(){
+        console.log('X:', + this.x + ', Y: ', + this.y);
+    }
+}
+
+let point: Point = new Point(1, 2);
+point.draw();
+
+
+// ----------------------- Access Modifiers ---------------------------------------
+// public, private, and protected
 // 
-const ColorRed = 0;
-const ColorGreen = 1;
-const ColorBlue = 2;
-
-// enum is a constance in typescript
-// how to declare an enum
-// the colors in curly brackets will usually follow this type of increment
-enum Color {Red = 0, Green = 1, Blue = 2, Purple = 3};
-let backgroundColor = Color.Red;
-
-// ------------------------------------------------------------------
-
-
-
-
-
-// ------------------------------------------------------------------
