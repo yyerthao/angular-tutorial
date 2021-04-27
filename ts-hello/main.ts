@@ -71,29 +71,21 @@
 
 // ------------------------------------------------------------------
 
+// ./ refers to the current folder
+import { Point } from './point';
 
-class Point {
-    x: number;
-    y: number;
-    
-    // constructor is a method we call when we create an instance of that class
-    // constructor is a reserved keyword in TS
-    // ? makes the variables optional - removes compilation error when creating a 
-    // point object with no initial value
-    constructor(x?: number, y?: number){
-        this.x = x;
-        this.y = x;
-    }
-    
-    draw(){
-        console.log('X:', + this.x + ', Y: ', + this.y);
-    }
-}
-
-let point: Point = new Point(1, 2);
+let point  = new Point(1, 2);
 point.draw();
 
 
-// ----------------------- Access Modifiers ---------------------------------------
-// public, private, and protected
-// 
+
+
+
+/* ---------------------- NOTES -----------------------
+
+
+
+
+
+
+*/
